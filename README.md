@@ -13,7 +13,6 @@ Este é um projeto de uma API simplificada que simula o funcionamento básico do
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Mock de Serviço de Autorização](#mock-de-serviço-de-autorização)
 - [Contribuição](#contribuição)
-- [Licença](#licença)
 
 ## Sobre o Projeto
 
