@@ -81,12 +81,15 @@ The API will be available at `http://localhost:8080`. You can use tools like Pos
     "type": "COMMON"
 }
 ```
+![Usage](/home/vt/Imagens/Capturas de tela/post-user.png)
+
 - Note: The `type` field can be `COMMON` or `MERCHANT`.
 
 ---
 
 - **Get All Users:**
 - `GET /users`
+![Usage](/home/vt/Imagens/Capturas de tela/users.png)
 
 - **Perform Transaction:**
 - `POST /transactions`
@@ -98,6 +101,7 @@ The API will be available at `http://localhost:8080`. You can use tools like Pos
     "receiverId": 1
 }
 ```
+![Usage](/home/vt/Imagens/Capturas de tela/post-transaction.png)
 
 ## Project Structure
 ```
