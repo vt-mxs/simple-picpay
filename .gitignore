@@ -31,8 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-#IMgs
-src/main/resources/application-prints/post-transaction.png
-src/main/resources/application-prints/post-user.png
-src/main/resources/application-prints/users.png
