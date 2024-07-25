@@ -102,7 +102,7 @@ The API will be available at `http://localhost:8080`. You can use tools like Pos
 }
 ```
 
-![Transaction Usage](/home/vt/Imagens/Capturas de tela/post-transaction.png)
+![Transaction Usage](src/main/resources/application-prints/post-transaction.png)
 
 ## Project Structure
 ```
