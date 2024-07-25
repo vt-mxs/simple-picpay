@@ -101,7 +101,8 @@ The API will be available at `http://localhost:8080`. You can use tools like Pos
     "receiverId": 1
 }
 ```
-![Post Transaction Usage](/src/main/resources/application-prints/post-transaction.png)
+
+<img alt="Post Transaction Usage" src="/src/main/resources/application-prints/post-transaction.png"/>
 
 ## Project Structure
 ```
