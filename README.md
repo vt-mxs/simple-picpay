@@ -1,73 +1,75 @@
-# Simulador de PicPay - API com Spring Boot
+# PicPay Simulator - API with Spring Boot
 
-Este é um projeto de uma API simplificada que simula o funcionamento básico do PicPay. Os usuários podem realizar transações entre si, e há um mock que simula um serviço de autorização para realizar a transação.
-- [Link para o github do desafio](https://github.com/PicPay/picpay-desafio-backend)
-## Índice
+This is a project for a simplified API that simulates basic functionality of PicPay. Users can perform transactions with each other, and there is a mock service to simulate transaction authorization.
+- [Link to the challenge GitHub](https://github.com/PicPay/picpay-desafio-backend)
 
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Funcionalidades](#funcionalidades)
-- [Pré-requisitos](#pré-requisitos)
-- [Instalação](#instalação)
-- [Uso](#uso)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Mock de Serviço de Autorização](#mock-de-serviço-de-autorização)
-- [Contribuição](#contribuição)
+## Table of Contents
 
-## Sobre o Projeto
+- [About the Project](#about-the-project)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Authorization Service Mock](#authorization-service-mock)
+- [Contributing](#contributing)
+- [License](#license)
 
-Este projeto foi desenvolvido para simular operações básicas de transações entre usuários, similar ao PicPay. Ele inclui um mock de serviço de autorização para validar transações.
-Ocorreu problemas no mock referente as notificações, por isso acabei não conseguindo implementar.
+## About the Project
 
-## Funcionalidades
+This project was developed to simulate basic operations of transactions between users, similar to PicPay. It includes a mock authorization service to validate transactions.
+There were issues with the mock related to notifications, so I was unable to implement it.
 
-- Criação de usuários
-- Realização de transações entre usuários
-- Mock de serviço de autorização para validação de transações
+## Features
 
-## Pré-requisitos
+- User creation
+- Performing transactions between users
+- Mock authorization service for transaction validation
 
-Para rodar este projeto, você vai precisar ter instalado:
+## Prerequisites
 
-- Java 11 ou superior
+To run this project, you will need to have the following installed:
+
+- Java 17 or higher
 - Maven
-- PostgreSQL (ou outro banco de dados relacional de sua preferência)
+- H2Database (or another database of your choice)
 
-## Instalação
+## Installation
 
-1. Clone o repositório:
+1. Clone the repository:
 ```bash
-git clone https://github.com/seu-usuario/simulador-picpay.git
-cd simulador-picpay
+git clone https://github.com/vt-mxs/simple-picpay
+cd simple-picpay
 ```
 
-2. Configure o banco de dados:
+2. Configure the database:
 
-Crie um banco de dados com o H2databse e ajuste as configurações no arquivo `application.properties` localizado em `src/main/resources`:
+Create a database with H2Database and adjust the settings in the `application.properties` file located at `src/main/resources`:
 ```properties
 spring.datasource.url = jdbc:h2:mem:test_mem
 spring.datasource.driver-class-name = org.h2.Driver
-spring.datasource.username = seu-usarname
-spring.datasource.password = senha(pode ficar vázia)
-spring.jpa.database-plataform = org.hibernate.dialect.H2Dialect
+spring.datasource.username = your-username
+spring.datasource.password = password (can be left empty)
+spring.jpa.database-platform = org.hibernate.dialect.H2Dialect
 spring.h2.console.enabled = true
 ```
 
-3. Compile e execute a aplicação:
+3. Build and run the application:
 ```bash
 mvn clean install
 mvn spring-boot:run
 ```
 
-## Uso
+## Usage
 
-A API estará disponível em `http://localhost:8080`. Você pode usar ferramentas como Postman ou Insomnia para interagir com a API.
+The API will be available at `http://localhost:8080`. You can use tools like Postman or Insomnia to interact with the API.
 
 ### Endpoints
 
-- **Criar Usuário:**
+- **Create User:**
 - `POST /user`
-- Corpo da Requisição:
+- Request Body:
 ```json
 {
     "firstName": "First Name",
@@ -79,16 +81,16 @@ A API estará disponível em `http://localhost:8080`. Você pode usar ferramenta
     "type": "COMMON"
 }
 ```
-- Nota: O campo `type` pode ser `COMMON` ou `MERCHANT`.
+- Note: The `type` field can be `COMMON` or `MERCHANT`.
 
 ---
 
-- **Consultar todos os usuários:**
+- **Get All Users:**
 - `GET /users`
 
-- **Realizar Transação:**
+- **Perform Transaction:**
 - `POST /transactions`
-- Corpo da Requisição:
+- Request Body:
 ```json
 {
     "value": 10,
@@ -97,9 +99,9 @@ A API estará disponível em `http://localhost:8080`. Você pode usar ferramenta
 }
 ```
 
-## Estrutura do Projeto
+## Project Structure
 ```
-simulador-picpay
+picpay-simulator
 ├── src
 │   ├── main
 │   │   ├── java
@@ -141,7 +143,7 @@ simulador-picpay
 └── pom.xml
 ```
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - Java
 - Spring Boot
@@ -150,14 +152,12 @@ simulador-picpay
 - H2Database
 - Maven
 
-## Mock de Serviço de Autorização
+## Authorization Service Mock
 
-Para a simulação do serviço de autorização, foi utilizado um mock. O código do mock pode ser encontrado [aqui](https://util.devi.tools/api/v2/authorize).
+For simulating the authorization service, a mock was used. The mock code can be found [here](https://util.devi.tools/api/v2/authorize).
 
-Certifique-se de configurar e executar o mock antes de iniciar a aplicação principal para garantir que as transações sejam autorizadas corretamente.
+Make sure to configure and run the mock before starting the main application to ensure transactions are properly authorized.
 
-## Contribuição
+## Contributing
 
-Contribuições são bem-vindas! Se você tiver alguma sugestão ou encontrar algum problema, por favor, abra uma issue ou envie um pull request.
-
----
+Contributions are welcome! If you have any suggestions or find any issues, please open an issue or submit a pull request.
