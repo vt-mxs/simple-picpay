@@ -60,7 +60,7 @@ spring.h2.console.enabled = true
 mvn clean install
 mvn spring-boot:run
 ```
-- Note: If an error occurs using the commands, use an IDE to automate the process.
+
 ## Usage
 
 The API will be available at `http://localhost:8080`. You can use tools like Postman or Insomnia to interact with the API.
@@ -81,15 +81,12 @@ The API will be available at `http://localhost:8080`. You can use tools like Pos
     "type": "COMMON"
 }
 ```
-![Post User Usage](/home/vt/Imagens/Capturas de tela/post-user.png)
-
 - Note: The `type` field can be `COMMON` or `MERCHANT`.
 
 ---
 
 - **Get All Users:**
 - `GET /users`
-![Get Users Usage](/home/vt/Imagens/Capturas de tela/users.png)
 
 - **Perform Transaction:**
 - `POST /transactions`
@@ -101,8 +98,6 @@ The API will be available at `http://localhost:8080`. You can use tools like Pos
     "receiverId": 1
 }
 ```
-
-![Transaction Usage](src/main/resources/application-prints/post-transaction.png)
 
 ## Project Structure
 ```
