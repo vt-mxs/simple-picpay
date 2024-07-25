@@ -60,7 +60,7 @@ spring.h2.console.enabled = true
 mvn clean install
 mvn spring-boot:run
 ```
-
+- Note: If an error occurs using the commands, use an IDE to automate the process.
 ## Usage
 
 The API will be available at `http://localhost:8080`. You can use tools like Postman or Insomnia to interact with the API.
